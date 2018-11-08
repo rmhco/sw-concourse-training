@@ -11,7 +11,7 @@ export BOSH_CLIENT_SECRET=$(bosh int ~/creds.yml --path /admin_password)
 export BOSH_DEPLOYMENT=rmhco-nginx
 export BOSH_DIRECTOR='https://10.4.1.4:25555'
 export BOSH_ENVIRONMENT='training'
-export BOSH_CLIENT=admin
+#export BOSH_CLIENT=admin
 
 cd source-code/nginx_release
 
