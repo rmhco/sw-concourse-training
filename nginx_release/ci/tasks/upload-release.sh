@@ -5,9 +5,10 @@ set -x
 #The director is expected to be secured and only locally available for this lab session
 #But this does not demonostrate a best practice
 
-export CA_CERT_URL=https://unreal-snw.s3.amazonaws.com/training-bosh.pem
-export BOSH_CLIENT_SECRET=<replace-me>
-export BOSH_DEPLOYMENT=${GITHUB_USERNAME}-nginx
+export CA_CERT_URL=https://s3.us-east-2.amazonaws.com/dg-training-concourse/training-bosh.pem
+export BOSH_CLIENT=$(bosh int ~/creds.yml --path /username)
+export BOSH_CLIENT_SECRET=$(bosh int ~/creds.yml --path /admin_password)
+export BOSH_DEPLOYMENT=rmhco-nginx
 export BOSH_DIRECTOR='https://10.4.1.4:25555'
 export BOSH_ENVIRONMENT='training'
 export BOSH_CLIENT=admin
