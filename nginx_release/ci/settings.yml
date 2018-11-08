@@ -11,4 +11,4 @@ release:
 github:
   username: (( grab $GITHUB_USERNAME ))
   branch: master
-  repository: (( concat "https://github.com/rmhco/sw-concourse-training.git" ))
+  repository: (( concat "https://github.com/" "rmhco" "/sw-concourse-training.git" ))
